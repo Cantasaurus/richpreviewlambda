@@ -27,7 +27,6 @@ func clientError(status int) (events.APIGatewayProxyResponse, error) {
     }, nil
 }
 
-
 func PostHandler(req events.APIGatewayProxyRequest) (events.APIGatewayProxyResponse, error){
   var request Request
   response := &Response{}
@@ -57,7 +56,6 @@ func PostHandler(req events.APIGatewayProxyRequest) (events.APIGatewayProxyRespo
     Headers: cors,
   }, nil
 }
-
 
 func main(){
   lambda.Start(PostHandler)
